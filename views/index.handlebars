@@ -1,0 +1,47 @@
+<div class="center">
+<div class="left">
+
+<!-- New burgers added with header and "eat Burger button" -->
+<h3>New Burger's</h3>
+<ul>
+  {{#each burgers}}
+  	<li>
+			<p><span class="label"></span> {{this.burger}}</p>
+			<button data-id="{{this.id}}" class="delburger">Devour it!</button>
+  	</li>
+  {{/each}}
+</ul>
+</div>
+
+{{!-- center header and image --}}
+<div class="center">
+<h1>Eat-Da-Burger's!</h1>
+<img src="/assets/js/burger1.png" alt="Picture of a burger" class="width: 200px" style="width:9m; height:9em;">
+{{!-- <h2>Add a Burger</h2> --}}
+<form class="create-form">
+{{!-- form to add new burger --}}
+  <div class="form-group">
+    {{!-- <label for="burg">New Burger:</label> --}}
+    <input type="text" id="burg" name="burger">
+  </div>
+{{!-- Eaten burgers from Database --}}
+  <button type="submit">Add a Burger</button>
+</form>
+<p class="text-right">Click "Add Burger" to Enter a Burger you want to eat.</p>
+</div>
+
+{{!-- right div burgers eaten and list of eaten burgers --}}
+
+<div class="right">
+<h3>Burger's Devoured</h3>
+<ul>
+  {{#each burgers}}
+  	<li>
+			<p><span class="label"></span> {{this.burger}}</p>
+  {{/each}}
+</ul>
+</div>
+</div>
+
+
+

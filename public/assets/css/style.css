@@ -1,0 +1,28 @@
+ body {
+    background-color: orange;
+}
+
+.center {
+    float: left;   
+
+    text-align: center;
+}
+
+.left {
+    float: left;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+ /* width: 200px; */
+    text-align: center;
+}
+
+.right {
+    float: right;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    /* width: 250; */
+    text-align: center;
+}
+
