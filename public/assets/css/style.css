@@ -1,28 +1,30 @@
  body {
     background-color: orange;
 }
-
+/* div with title and header */
 .center {
-    float: left;   
-
+    float: left; 
     text-align: center;
 }
-
+/* left div new burgers  */
 .left {
     float: left;
     padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 50px;
     padding-top: 50px;
  /* width: 200px; */
     text-align: center;
 }
-
+/* right div burgers devoured */
 .right {
-    float: right;
-    padding-left: 100px;
+    float: left;
+    padding-left: 50px;
     padding-right: 100px;
     padding-top: 50px;
     /* width: 250; */
     text-align: center;
 }
 
+.form {
+    padding: 20px;
+}

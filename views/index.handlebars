@@ -16,18 +16,18 @@
 {{!-- center header and image --}}
 <div class="center">
 <h1>Eat-Da-Burger's!</h1>
-<img src="/assets/js/burger1.png" alt="Picture of a burger" class="width: 200px" style="width:9m; height:9em;">
+<img src="/assets/image/burger1.png" alt="Picture of a burger" class="width: 200px" style="width:9m; height:9em;">
 {{!-- <h2>Add a Burger</h2> --}}
 <form class="create-form">
 {{!-- form to add new burger --}}
-  <div class="form-group">
+  <div class="form-group form">
     {{!-- <label for="burg">New Burger:</label> --}}
     <input type="text" id="burg" name="burger">
   </div>
 {{!-- Eaten burgers from Database --}}
   <button type="submit">Add a Burger</button>
 </form>
-<p class="text-right">Click "Add Burger" to Enter a Burger you want to eat.</p>
+<p class="text-right">Click "Add a Burger" to Enter a Burger You Want to Eat.</p>
 </div>
 
 {{!-- right div burgers eaten and list of eaten burgers --}}
@@ -36,8 +36,10 @@
 <h3>Burger's Devoured</h3>
 <ul>
   {{#each burgers}}
+		{{!-- {{#if eaten}} --}}
   	<li>
 			<p><span class="label"></span> {{this.burger}}</p>
+			{{!-- {{/if eaten}} --}}
   {{/each}}
 </ul>
 </div>
