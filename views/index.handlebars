@@ -1,49 +1,50 @@
-<div class="center">
-<div class="left">
+<div class="wrapper">
 
-<!-- New burgers added with header and "eat Burger button" -->
-<h3>New Burger's</h3>
-<ul>
-  {{#each burgers}}
-  	<li>
-			<p><span class="label"></span> {{this.burger}}</p>
-			<button data-id="{{this.id}}" class="delburger">Devour it!</button>
-  	</li>
-  {{/each}}
-</ul>
+    <div class="grid">
+        <!-- New burgers added with header and "eat Burger button" -->
+        <h3>New Burger's</h3>
+        <ul class="">
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>
+                <p><span class="label"></span> {{this.burger}}
+                    <button data-id="{{this.id}}" class="devBurger">Devour it!</button></p>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+
+    {{!-- Div to center header and image --}}
+    <div class="grid">
+        <h1>Eat-Da-Burger's!</h1>
+        <img src="/assets/image/burger1.png" alt="Picture of a burger" style="width:9m; height:9em">
+        <form class="create-form">
+            <br>
+            {{!-- form to add new burger --}}
+            <div class="form-group form">
+                {{!-- <label for="burg">New Burger:</label> --}}
+                <input type="text" id="burg" name="burger">
+            </div>
+            {{!-- Eaten burgers from Database --}}
+            <button type="submit" class="addBurg">Add a Burger</button>
+        </form>
+        <h3>Click "Add a Burger" to Enter a Burger You Want to Eat.</h3>
+    </div>
+
+
+    {{!-- right div burgers eaten and list of eaten burgers --}}
+    <div class="grid">
+        <h3>Burger's Devoured</h3>
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <li>
+                <p><span class="label"></span> {{this.burger}}</p>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
 </div>
-
-{{!-- center header and image --}}
-<div class="center">
-<h1>Eat-Da-Burger's!</h1>
-<img src="/assets/image/burger1.png" alt="Picture of a burger" class="width: 200px" style="width:9m; height:9em;">
-{{!-- <h2>Add a Burger</h2> --}}
-<form class="create-form">
-{{!-- form to add new burger --}}
-  <div class="form-group form">
-    {{!-- <label for="burg">New Burger:</label> --}}
-    <input type="text" id="burg" name="burger">
-  </div>
-{{!-- Eaten burgers from Database --}}
-  <button type="submit">Add a Burger</button>
-</form>
-<p class="text-right">Click "Add a Burger" to Enter a Burger You Want to Eat.</p>
-</div>
-
-{{!-- right div burgers eaten and list of eaten burgers --}}
-
-<div class="right">
-<h3>Burger's Devoured</h3>
-<ul>
-  {{#each burgers}}
-		{{!-- {{#if eaten}} --}}
-  	<li>
-			<p><span class="label"></span> {{this.burger}}</p>
-			{{!-- {{/if eaten}} --}}
-  {{/each}}
-</ul>
-</div>
-</div>
-
-
-
