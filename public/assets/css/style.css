@@ -1,11 +1,11 @@
 body {
-  background-color: orange;
+  background-color: lightgreen;
 }
 ul {
   list-style-type: none;
 }
 .wrapper {
-  background-color: orange;
+  background-color: lightgreen;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   text-align: center;
