@@ -1,6 +1,12 @@
 # EatTheBurger app
+This project 
+included a lot of modularized files and folders.  Specific trechnologies used are HTML, css, Node.js, express, express-handlebars, MySQL, ORM to name ju whichst some.  I have deployed this app to Heroku.  This needed JAWSDB which is a Heroku add on that can use MySQL database with Heroku.
 
+The Heroku URL: https://eat-da-burger-doug.herokuapp.com/
 
+github URL: https://github.com/Dritchie3/EatTheBurger
+
+Portfolio URL: https://dritchie3.github.io/AboutMe/portfolio.html
 
 
 
