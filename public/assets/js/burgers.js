@@ -1,10 +1,8 @@
         //grab the data from the page
         //make an ajax call( handel the response)
         //the client-side work is done
-
 $(function() {
-    console.log("this doc works");
-
+    
     $(".devBurger").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id")
@@ -13,7 +11,6 @@ $(function() {
         var newBurg = {
             burger: id,
         };
-            debugger
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
@@ -21,9 +18,7 @@ $(function() {
         }).then(
             function () {
                 console.log("id", id);
-                // console.log("changed to devoured", eatBurger);
                 // Reload the page to get the updated list
-                debugger
                 location.reload();
             }
         );
