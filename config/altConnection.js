@@ -8,8 +8,6 @@ var connection = mysql.createConnection({
     password: "!123Bobby123",
     database: "eat_burgerDB"
 });
-
-// Initiate MySQL Connection.
 connection.connect(function (err) {
     if (err) {
         console.error("error connecting: " + err.stack);
