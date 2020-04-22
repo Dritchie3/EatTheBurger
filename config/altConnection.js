@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "!123Bobby123",
+    password: "",
     database: "eat_burgerDB"
 });
 connection.connect(function (err) {
@@ -29,7 +29,7 @@ if (process.env.JAWSDB_URL) {
     host: "	lmag6s0zwmcswp5w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     port: 3306,
     user: "	ezsmoybrl5g5fmes",
-    password: "z4e5bi3embuj4sza",
+    password: "",
     database: "	v3ljip0j1brttkxo"
     });
 };
