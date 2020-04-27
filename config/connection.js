@@ -1,17 +1,11 @@
 //connection for "localhost"
-const mysql = require("mysql");
+var mysql = require("mysql");
 
-
-require("dotenv").config();
-const api_Key = process.env.MYSQL_API_KEY;
-// console.log(api_Key);
-
-
-const connection = mysql.createConnection({
+var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: api_Key,
+    password: "",
     database: "eat_burgerDB"
 });
 connection.connect(function (err) {
@@ -23,3 +17,19 @@ connection.connect(function (err) {
 });
 
 module.exports = connection;
+
+//connection for "Heroku"
+var mysql = require("mysql");
+
+var connection;
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+}else {
+    connection = mysql.createConnection({
+    host: "	lmag6s0zwmcswp5w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    port: 3306,
+    user: "	ezsmoybrl5g5fmes",
+    password: "ub3db4wy6y1bsh6v",
+    database: "	v3ljip0j1brttkxo"
+    });
+};
