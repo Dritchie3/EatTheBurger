@@ -1,11 +1,17 @@
 //connection for "localhost"
-var mysql = require("mysql");
+const mysql = require("mysql");
 
-var connection = mysql.createConnection({
+
+require("dotenv").config();
+const api_Key = process.env.MYSQL_API_KEY;
+// console.log(api_Key);
+
+
+const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "",
+    password: api_Key,
     database: "eat_burgerDB"
 });
 connection.connect(function (err) {
