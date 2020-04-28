@@ -10,6 +10,9 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     user: "ezsmoybrl5g5fmes",
     password: "ga0tjiutl78bv5it",
-    database: "	v3ljip0j1brttkxo"
+    database: "v3ljip0j1brttkxo"
     });
 };
+
+
+module.exports = connection;
